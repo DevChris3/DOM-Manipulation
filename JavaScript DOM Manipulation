@@ -1,0 +1,90 @@
+// accessing the document directory
+// console.dir(document);
+
+// all the methods within the the DOM directory
+// console.log(document.domain);
+// console.log(document.title);
+// console.log(document.head);
+// console.log(document.body);
+// console.log(document.title);
+// document.all access the HTML Collection
+// console.log(document.all);
+
+// getElementById 
+// let headingTitle = document.getElementById('heading-title');
+// console.log(document.getElementById('heading-title'));
+// headingTitle.innerText = 'Hello World';
+// changing the styles 
+// headingTitle.style.borderBottom = 'solid 3px black'
+
+// let middleTitle = document.getElementById('middle-title');
+// console.log(document.getElementById('middle-title'));
+// middleTitle.innerText = 'Goodbye World';
+// middleTitle.innerHTML = '<p>im herreee</p>';
+
+
+// getElementsByClassName
+// let items = document.getElementsByClassName('item');
+// console.log(items);
+
+// to change elements by class name...grab its index first
+// items[1].textContent = 'Hello Two';
+// items[2].style.color = 'blue';
+// items[3].style.backgroundColor = 'yellow';
+
+// gives error
+// items.style.backgroundColor = '#f4f4f4;
+
+// example to iterate over the elements to change ALL class name 
+// for(let i = 0; i < items.length; i++) {
+//     items[i].style.backgroundColor = '#f4f4f4';
+// }
+
+
+// getElementsByTagName
+// let div = document.getElementsByTagName('div');
+// console.log(div);
+
+// to change elements by class name...grab its index first
+// div[0].textContent = 'Hello Two';
+// div[1].style.color = 'blue';
+// div[2].style.backgroundColor = 'yellow';
+
+// for(let i = 0; i < div.length; i++) {
+//     div[i].style.fontSize = '28px';
+// }
+
+
+// QUERY SELECTOR
+let headingTitle = document.querySelector('#heading-title');
+headingTitle.style.borderBottom = 'solid 3px black';
+
+// using querySelector to change input element
+let input = document.querySelector('input');
+input.value = 'Hello World';
+console.log(input);
+
+// using querySelector to change input[type=submit] element
+let submit = document.querySelector('input[type="submit"]');
+submit.value = 'Hello World';
+submit.style.color = 'blue';
+console.log(submit);
+
+// using querySelector to change button element
+let btn = document.querySelector('button');
+btn.value = 'Hello World';
+btn.textContent = 'Log In';
+console.log(btn);
+
+// :last-child
+let items = document.querySelector('.item');
+items.style.color = 'red';
+// this will only style the first element
+
+// this example will style ALL using querySelector
+let lastItem = document.querySelector('.item:last-child');
+lastItem.style.color = 'blue';
+
+// this example will style second element using querySelector
+let secondItem = document.querySelector('.item:nth-child(2)');
+secondItem.style.color = 'pink';
