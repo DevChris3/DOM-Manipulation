@@ -88,3 +88,11 @@ lastItem.style.color = 'blue';
 // this example will style second element using querySelector
 let secondItem = document.querySelector('.item:nth-child(2)');
 secondItem.style.color = 'pink';
+
+
+// querySelectorAll
+let titles = document.querySelectorAll('h2');
+console.log(titles);
+
+titles[0].textContent = 'Johnny';
+titles[1].textContent = 'Brascoe';
